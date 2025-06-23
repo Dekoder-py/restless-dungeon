@@ -3,10 +3,4 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.13 (adventure-game)" />
   </component>
-  <component name="FormatOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
-  </component>
-  <component name="OptimizeOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
-  </component>
 </project>

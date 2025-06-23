@@ -9,7 +9,7 @@ def monster_room():
         monster_room()
     elif choice == "flee":
         print("You couldn't outrun the monsters. You Died.")
-        print("GAME OVER")
+        print("[red]GAME OVER[/red]")
         quit()
     elif choice == "fight":
-        print("You killed all the zombies. Good work.")
+        print("You killed all the zombies. [green]Good work.[/green]")

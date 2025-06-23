@@ -1,3 +1,6 @@
+from rich import print
+
+
 def monster_room():
     options = ["fight", "flee"]
     print()

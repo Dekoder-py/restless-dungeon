@@ -1,7 +1,7 @@
 from rich import print
 
 
-def monster_room():
+def monster_room(player):
     options = ["fight", "flee"]
     print()
     print("You stumbled into a room full of zombies.")
@@ -9,10 +9,9 @@ def monster_room():
     choice = input(">> ").lower()
     if choice not in options:
         print("You cannot do that.")
-        monster_room()
+        monster_room(player)
     elif choice == "flee":
-        print("You couldn't outrun the monsters. You Died.")
-        print("[red]GAME OVER[/red]")
-        quit()
+        player.consume_energy(2)
     elif choice == "fight":
-        print("You killed all the zombies. [green]Good work.[/green]")
+        player.take_damage(5)
+        print("You killed all the zombies.")

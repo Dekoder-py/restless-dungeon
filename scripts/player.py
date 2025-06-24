@@ -11,7 +11,7 @@ class Player:
 
     def take_damage(self, damage=5):
         self.health -= damage
-        if self.health < 0:
+        if self.health <= 0:
             self.health = 0
             print("You ran out of health and died.")
             print("[red]GAME OVER[/red]")
@@ -21,7 +21,7 @@ class Player:
 
     def consume_energy(self, energy_used=5):
         self.energy -= energy_used
-        if self.energy < 0:
+        if self.energy <= 0:
             self.energy = 0
             print("You ran out of energy and collapsed.")
             print("[red]GAME OVER[/red]")
@@ -38,3 +38,10 @@ class Player:
         print("New inventory: ")
         for i in self.inventory:
             print(f"{i.title()}: {self.inventory[i]}")
+
+    def rest(self):
+        self.health = self.max_health
+        self.energy = self.max_energy
+        print("You have recovered all your energy and health:")
+        print(f"[green]Health: {self.health}[/green]")
+        print(f"[green]Energy: {self.energy}[/green]")

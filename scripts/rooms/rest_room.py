@@ -1,11 +1,14 @@
 def rest_room(player):
-    options = ["yes", "no", "sleep", "leave"]
     print("You enter a peaceful room with a cosy bed.")
     print("It is safe to rest. Do you sleep?")
     choice = input(">> ").lower()
-    if choice not in options:
-        print("You cannot do that.")
-        rest_room(player)
-    elif choice == "sleep" or choice == "yes":
+    continues = ["y", "ye", "ya", "yah", "yes", "yeah", "okay", "ok", "sure", "i guess", "yea"]
+    nos = ["n", "na", "no", "nah", "nope", "no way", "no thanks"]
+    if choice in continues:
         print("You had a wonderful sleep.")
         player.rest()
+    elif choice in nos:
+        pass
+    else:
+        print("You cannot do that.")
+        rest_room(player)

@@ -15,7 +15,7 @@ def zombie_room(player):
     elif choice == "flee":
         player.consume_energy(2)
     elif choice == "fight":
-        number = randint(0, 10)
+        number = randint(0, 5)
         player.take_damage(5)
         print("You killed all the zombies.")
         if number == 5:

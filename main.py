@@ -41,7 +41,7 @@ class Game:
             while True:
                 print("Are you ready to continue your journey?")
                 choice = input(">> ").lower()
-                continues = ["yes", "yeah", "okay", "ok", "sure", "i guess", "yea", "not really but okay"]
+                continues = ["y", "yes", "yeah", "okay", "ok", "sure", "i guess", "yea", "not really but okay"]
                 if choice in continues:
                     print("You continue onwards.")
                     print()

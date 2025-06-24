@@ -34,6 +34,7 @@ class Game:
 
     def run(self):
         print("[yellow]Welcome to the dungeon.[/yellow]")
+        sleep(1)
         print()
         while self.level_count < 10:
             self.enter_room()

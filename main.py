@@ -17,6 +17,7 @@ class Game:
         self.last_room = 0
         self.first_room = True
         self.level_count = 0
+        self.win_level = 15
 
     @staticmethod
     def end(death_type):
@@ -44,7 +45,7 @@ class Game:
         print("[yellow]Welcome to the dungeon.[/yellow]")
         sleep(1)
         print()
-        while self.level_count < 10:
+        while self.level_count < self.win_level:
             self.enter_room()
             while True:
                 print("Are you ready to continue your journey?")

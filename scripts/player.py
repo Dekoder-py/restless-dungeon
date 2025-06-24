@@ -14,7 +14,7 @@ class Player:
         self.health -= damage
         if self.health <= 0:
             self.health = 0
-            self.game.over("health")
+            self.game.end("health")
         else:
             print(f"You took {damage} damage. Your health is at {self.health}")
 
@@ -22,7 +22,7 @@ class Player:
         self.energy -= energy_used
         if self.energy <= 0:
             self.energy = 0
-            self.game.over("energy")
+            self.game.end("energy")
         else:
             print(f"You consumed {energy_used} energy. Current energy: {self.energy}")
 

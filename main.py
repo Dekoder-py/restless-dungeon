@@ -18,7 +18,7 @@ class Game:
         self.level_count = 0
 
     @staticmethod
-    def over(death_type):
+    def end(death_type):
         print(f"You ran out of {death_type.lower()} and died.")
         print("[red]GAME OVER[/red]")
         quit()

@@ -30,10 +30,11 @@ class Player:
             print(f"You consumed {energy_used} energy. Current energy: {self.energy}")
 
     def pick_up_item(self, item):
+        item = item.lower()
         if item not in self.inventory:
             self.inventory[item] = 1
         else:
             self.inventory[item] += 1
         print("New inventory: ")
         for i in self.inventory:
-            print(f"{i}: {self.inventory[i]}")
+            print(f"{i.title()}: {self.inventory[i]}")

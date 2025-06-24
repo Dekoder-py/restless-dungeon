@@ -17,10 +17,13 @@ class Game:
 
     def enter_room(self):
         rooms = [empty_room, rest_room, monster_room]
-        number = randint(0, len(rooms) - 1)
-        if number == self.last_room or (self.first_room and number == 1):
-            number = randint(0, len(rooms) - 1)
+        if self.first_room:
+            number = randint(2, len(rooms) - 1)
             self.first_room = False
+        else:
+            number = randint(0, len(rooms) - 1)
+            if number == self.last_room:
+                number = randint(0, len(rooms) - 1)
         rooms[number](self.player)
         self.last_room = number
         sleep(2)

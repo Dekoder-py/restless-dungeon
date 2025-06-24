@@ -2,7 +2,7 @@ from rich import print
 
 
 class Player:
-    def __init__(self, max_health=100, max_energy=20):
+    def __init__(self, max_health=80, max_energy=15):
         self.max_health = max_health
         self.max_energy = max_energy
         self.health = self.max_health

@@ -3,7 +3,7 @@ from random import randint
 from rich import print
 
 
-def monster_room(player):
+def zombie_room(player):
     options = ["fight", "flee"]
     print()
     print("You stumble into a room full of zombies.")
@@ -11,7 +11,7 @@ def monster_room(player):
     choice = input(">> ").lower()
     if choice not in options:
         print("You cannot do that.")
-        monster_room(player)
+        zombie_room(player)
     elif choice == "flee":
         player.consume_energy(2)
     elif choice == "fight":

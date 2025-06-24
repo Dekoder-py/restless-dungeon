@@ -2,7 +2,8 @@ from rich import print
 
 
 class Player:
-    def __init__(self, max_health=80, max_energy=15):
+    def __init__(self, game, max_health=80, max_energy=15):
+        self.game = game
         self.max_health = max_health
         self.max_energy = max_energy
         self.health = self.max_health
@@ -13,9 +14,7 @@ class Player:
         self.health -= damage
         if self.health <= 0:
             self.health = 0
-            print("You ran out of health and died.")
-            print("[red]GAME OVER[/red]")
-            quit()
+            self.game.over("health")
         else:
             print(f"You took {damage} damage. Your health is at {self.health}")
 
@@ -23,9 +22,7 @@ class Player:
         self.energy -= energy_used
         if self.energy <= 0:
             self.energy = 0
-            print("You ran out of energy and collapsed.")
-            print("[red]GAME OVER[/red]")
-            quit()
+            self.game.over("energy")
         else:
             print(f"You consumed {energy_used} energy. Current energy: {self.energy}")
 

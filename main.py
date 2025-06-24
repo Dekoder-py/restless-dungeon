@@ -12,10 +12,16 @@ from scripts.zombie_room import zombie_room
 
 class Game:
     def __init__(self):
-        self.player = Player()
+        self.player = Player(self)
         self.last_room = 0
         self.first_room = True
         self.level_count = 0
+
+    @staticmethod
+    def over(death_type):
+        print(f"You ran out of {death_type} and died.")
+        print("[red]GAME OVER[/red]")
+        quit()
 
     def enter_room(self):
         rooms = [empty_room, rest_room, zombie_room, walls_closing_room]
@@ -41,7 +47,8 @@ class Game:
             while True:
                 print("Are you ready to continue your journey?")
                 choice = input(">> ").lower()
-                continues = ["y", "yes", "yeah", "okay", "ok", "sure", "i guess", "yea", "not really but okay"]
+                continues = ["y", "ye", "ya", "yah", "yes", "yeah", "okay", "ok", "sure", "i guess", "yea",
+                             "not really but okay"]
                 if choice in continues:
                     print("You continue onwards.")
                     print()

@@ -3,11 +3,11 @@ from time import sleep
 
 from rich import print
 
-from scripts.empty_room import empty_room
 from scripts.player import Player
-from scripts.rest_room import rest_room
-from scripts.walls_closing_room import walls_closing_room
-from scripts.zombie_room import zombie_room
+from scripts.rooms.empty_room import empty_room
+from scripts.rooms.rest_room import rest_room
+from scripts.rooms.walls_closing_room import walls_closing_room
+from scripts.rooms.zombie_room import zombie_room
 
 
 class Game:
@@ -19,7 +19,7 @@ class Game:
 
     @staticmethod
     def over(death_type):
-        print(f"You ran out of {death_type} and died.")
+        print(f"You ran out of {death_type.lower()} and died.")
         print("[red]GAME OVER[/red]")
         quit()
 

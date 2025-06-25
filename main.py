@@ -43,6 +43,9 @@ class Game:
                 number = randint(0, len(rooms) - 1)
                 if number != self.last_room:
                     break
+        print(f"[green]Health:[/green] {self.player.health} / {self.player.max_health}")
+        print(f"[green]Energy:[/green] {self.player.energy} / {self.player.max_energy}")
+        print()
         rooms[number](self.player)
         self.last_room = number
         sleep(2)

@@ -10,9 +10,9 @@ def stranger_room(player):
     sleep(1)
     print("Do you approach the man?")
     choice = input(">> ")
-    approaches = ["approach", "talk", "walk up to him", "yes", "y", "yep", "ok", "okay", "sure", "ye", "yeah", "yea",
-                  "yah"]
-    if choice in approaches:
+    confirms = ["yes", "y", "yep", "ok", "okay", "sure", "ye", "yeah", "yea",
+                "yah"]
+    if choice in confirms:
         if randint(0, 1) == 0:
             sleep(0.8)
             print("[green]The strange man turns to you and smiles.[/green]")

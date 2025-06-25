@@ -1,6 +1,6 @@
 [project]
 name = "restless-dungeon"
-version = "0.1.5"
+version = "0.1.7"
 description = "A text-based dungeon adventure game."
 authors = [{ name = "Dekoder-py", email = "kyleyesmariam@icloud.com" }]
 readme = "README.md"

@@ -9,7 +9,7 @@ def stranger_room(player):
     print("[yellow]You enter a dimly lit room. There is a strange man standing in the corner.[/yellow]")
     sleep(1)
     print("Do you approach the man?")
-    choice = input(">> ")
+    choice = input(">> ").lower()
     confirms = ["yes", "y", "yep", "ok", "okay", "sure", "ye", "yeah", "yea",
                 "yah"]
     if choice in confirms:

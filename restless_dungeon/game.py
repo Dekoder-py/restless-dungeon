@@ -8,6 +8,7 @@ from restless_dungeon.scripts.player import Player
 from restless_dungeon.scripts.rooms.empty_room import empty_room
 from restless_dungeon.scripts.rooms.explosives_room import explosives_room
 from restless_dungeon.scripts.rooms.rest_room import rest_room
+from restless_dungeon.scripts.rooms.stair_room import stair_room
 from restless_dungeon.scripts.rooms.stranger_room import stranger_room
 from restless_dungeon.scripts.rooms.walls_closing_room import walls_closing_room
 from restless_dungeon.scripts.rooms.zombie_room import zombie_room
@@ -35,7 +36,7 @@ class Game:
         quit()
 
     def enter_room(self):
-        rooms = [empty_room, rest_room, zombie_room, walls_closing_room, stranger_room, explosives_room]
+        rooms = [empty_room, rest_room, zombie_room, walls_closing_room, stranger_room, explosives_room, stair_room]
         if self.first_room:
             number = randint(2, len(rooms) - 1)
             self.first_room = False

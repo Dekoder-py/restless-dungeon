@@ -11,7 +11,7 @@ def explosives_room(player):
     print("You can escape the blast if you sprint, or you can take the hit and preserve your energy.")
     sleep(1)
     print("Do you run for it?")
-    choice = input(">> ")
+    choice = input(">> ").lower()
     confirms = ["y", "ye", "ya", "yah", "yes", "yeah", "okay", "ok", "sure", "i guess", "yea"]
     denies = ["n", "na", "no", "nah", "nope", "no way", "no thanks"]
     if choice in confirms:
@@ -22,3 +22,5 @@ def explosives_room(player):
         print("You survived the explosions.")
     else:
         print("You cannot do that.")
+        sleep(1)
+        explosives_room(player)

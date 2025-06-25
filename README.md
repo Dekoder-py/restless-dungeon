@@ -27,4 +27,4 @@ restless-dungeon
 
 ### AI Usage
 
-I used AI for coming up with the name for the game, writing a couple of the commit messages, and helping with debugging when my eyes couldn't find the problems.
+I used AI (GitHub Copilot and ChatGPT) for coming up with the name for the game, writing a couple of the commit messages, and helping with debugging when my eyes couldn't find the problems. ChatGPT also helped me upload the project to PyPI.

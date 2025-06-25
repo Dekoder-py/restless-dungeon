@@ -1,3 +1,4 @@
+import os
 from random import randint
 from time import sleep
 
@@ -9,6 +10,13 @@ from scripts.rooms.rest_room import rest_room
 from scripts.rooms.stranger_room import stranger_room
 from scripts.rooms.walls_closing_room import walls_closing_room
 from scripts.rooms.zombie_room import zombie_room
+
+
+def clear_screen():
+    if os.name == 'nt':
+        _ = os.system('cls')
+    else:
+        _ = os.system('clear')
 
 
 class Game:
@@ -42,6 +50,7 @@ class Game:
         print()
 
     def run(self):
+        clear_screen()
         print("[yellow]Welcome to the dungeon.[/yellow]")
         sleep(1)
         print()
@@ -55,13 +64,15 @@ class Game:
                 if choice in continues:
                     print("You continue onwards.")
                     print()
+                    sleep(1.5)
                     break
                 else:
                     print("[red]In the dungeon, there is no escape.[/red]")
                     self.player.take_damage(2)
                     print()
-                sleep(1.5)
+                    sleep(1.5)
             self.level_count += 1
+            clear_screen()
         print("[green]Congratulations! You reached the end of the dungeon and escaped.[/green]")
         print("[bold]You Win.[bold]")
 

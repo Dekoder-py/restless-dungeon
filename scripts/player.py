@@ -1,3 +1,5 @@
+from time import sleep
+
 from rich import print
 
 
@@ -15,6 +17,7 @@ class Player:
         print(f"You took {damage} damage. Your health is at {self.health}")
         if self.health <= 0:
             self.health = 0
+            sleep(1)
             self.game.end("health")
 
     def consume_energy(self, energy_used=5):
@@ -22,6 +25,7 @@ class Player:
         print(f"You consumed {energy_used} energy. Current energy: {self.energy}")
         if self.energy <= 0:
             self.energy = 0
+            sleep(1)
             self.game.end("energy")
 
     def pick_up_item(self, item):
@@ -38,5 +42,7 @@ class Player:
         self.health = self.max_health
         self.energy = self.max_energy
         print("You have recovered all your energy and health:")
+        sleep(1)
         print(f"[green]Health: {self.health}[/green]")
+        sleep(1)
         print(f"[green]Energy: {self.energy}[/green]")

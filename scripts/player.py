@@ -43,6 +43,6 @@ class Player:
         self.energy = self.max_energy
         print("You have recovered all your energy and health:")
         sleep(1)
-        print(f"[green]Health: {self.health}[/green]")
+        print(f"[green]Health:[/green] {self.health}")
         sleep(1)
-        print(f"[green]Energy: {self.energy}[/green]")
+        print(f"[green]Energy:[/green] {self.energy}")

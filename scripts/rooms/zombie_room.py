@@ -6,7 +6,7 @@ from rich import print
 def zombie_room(player):
     options = ["fight", "flee"]
     print()
-    print("You stumble into a room full of zombies.")
+    print("[dark_orange]You stumble into a room full of zombies.[/dark_orange]")
     print("Do you fight or flee?")
     choice = input(">> ").lower()
     if choice not in options:

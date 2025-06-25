@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.13 (adventure-game)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.13 (restless-dungeon)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.13 (restless_dungeon)" project-jdk-type="Python SDK" />
 </project>

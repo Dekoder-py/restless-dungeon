@@ -1,4 +1,4 @@
-# Adventure Game
+# The Restless Dungeon
 
 A Text-based adventure game.
 

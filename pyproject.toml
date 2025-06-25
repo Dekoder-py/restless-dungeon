@@ -1,8 +1,8 @@
 [project]
 name = "restless-dungeon"
-version = "0.2.2"
+version = "0.2.3"
 description = "A text-based dungeon adventure game."
-authors = [{ name = "Dekoder-py", email = "kyleyesmariam@icloud.com" }]
+authors = [{ name = "Dekoder-py", email = "dekod3r.py@gmail.com" }]
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]

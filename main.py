@@ -24,7 +24,7 @@ class Game:
         self.player = Player(self)
         self.last_room = 0
         self.first_room = True
-        self.level_count = 0
+        self.room = 1
         self.win_level = 15
 
     @staticmethod
@@ -46,6 +46,8 @@ class Game:
         print(f"[green]Health:[/green] {self.player.health} / {self.player.max_health}")
         print(f"[green]Energy:[/green] {self.player.energy} / {self.player.max_energy}")
         print()
+        print(f"Room {self.room}")
+        print()
         rooms[number](self.player)
         self.last_room = number
         sleep(2)
@@ -57,7 +59,7 @@ class Game:
         print("[yellow]Welcome to the dungeon.[/yellow]")
         sleep(1)
         print()
-        while self.level_count < self.win_level:
+        while self.room <= self.win_level:
             self.enter_room()
             while True:
                 print("Are you ready to continue your journey?")
@@ -74,7 +76,7 @@ class Game:
                     self.player.take_damage(2)
                     print()
                     sleep(1.5)
-            self.level_count += 1
+            self.room += 1
             clear_screen()
         print("[green]Congratulations! You reached the end of the dungeon and escaped.[/green]")
         print("[bold]You Win.[bold]")

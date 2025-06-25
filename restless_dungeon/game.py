@@ -82,7 +82,3 @@ class Game:
             clear_screen()
         print("[green]Congratulations! You reached the end of the dungeon and escaped.[/green]")
         print("[bold]You Win.[bold]")
-
-
-game = Game()
-game.run()

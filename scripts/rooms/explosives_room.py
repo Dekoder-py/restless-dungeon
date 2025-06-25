@@ -4,9 +4,9 @@ from rich import print
 
 
 def explosives_room(player):
-    print("You walk into a room full of explosives.")
+    print("You walk into a room full of [red]explosives[/red].")
     sleep(1)
-    print("You hear a click beneath your feet as the explosives are triggered.")
+    print("[yellow]You hear a click beneath your feet as the explosives are triggered.[/yellow]")
     sleep(1)
     print("You can escape the blast if you sprint, or you can take the hit and preserve your energy.")
     sleep(1)

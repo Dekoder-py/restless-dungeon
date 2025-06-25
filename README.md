@@ -10,12 +10,18 @@ Clone the repo and install required dependencies:
 pip install restless-dungeon
 ```
 
-## Usage
-
-Run the main file:
+## Updates
 
 ```bash
-python3 -m restless-dungeon
+pip install --upgrade restless-dungeon
+```
+
+## Usage
+
+Run the program:
+
+```bash
+restless-dungeon
 ```
 
 

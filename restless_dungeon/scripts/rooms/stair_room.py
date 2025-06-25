@@ -10,11 +10,16 @@ def stair_room(player):
     choice = input(">> ").lower()
     if choice == "up":
         print("You reach the top of the stairs and find the next door.")
+        sleep(1)
     elif choice == "down":
         print("[red]As you descend, a deep growl fills the silence.[/red]")
+        sleep(1)
         print("[red]You turn around and sprint up the stairs.[/red]")
+        sleep(1)
         player.consume_energy(3)
+        sleep(1)
         print("You reach the top of the stairs and find the next door.")
     else:
         print("You cannot do that.")
+        sleep(1)
         stair_room(player)

@@ -4,13 +4,13 @@ from time import sleep
 
 from rich import print
 
-from scripts.player import Player
-from scripts.rooms.empty_room import empty_room
-from scripts.rooms.explosives_room import explosives_room
-from scripts.rooms.rest_room import rest_room
-from scripts.rooms.stranger_room import stranger_room
-from scripts.rooms.walls_closing_room import walls_closing_room
-from scripts.rooms.zombie_room import zombie_room
+from restless_dungeon.scripts.player import Player
+from restless_dungeon.scripts.rooms.empty_room import empty_room
+from restless_dungeon.scripts.rooms.explosives_room import explosives_room
+from restless_dungeon.scripts.rooms.rest_room import rest_room
+from restless_dungeon.scripts.rooms.stranger_room import stranger_room
+from restless_dungeon.scripts.rooms.walls_closing_room import walls_closing_room
+from restless_dungeon.scripts.rooms.zombie_room import zombie_room
 
 
 def clear_screen():

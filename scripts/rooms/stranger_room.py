@@ -15,7 +15,7 @@ def stranger_room(player):
     if choice in approaches:
         if randint(0, 1) == 0:
             sleep(0.8)
-            print("The strange man turns to you and smiles.")
+            print("[green]The strange man turns to you and smiles.[/green]")
             sleep(1)
             print("You feel a warm and calming energy.")
             sleep(1)

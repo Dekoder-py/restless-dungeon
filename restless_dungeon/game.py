@@ -58,7 +58,7 @@ class Game:
 
     def run(self):
         clear_screen()
-        print("[yellow]Welcome to the dungeon.[/yellow]")
+        print("[yellow]You have entered the restless dungeon.[/yellow]")
         sleep(1)
         print()
         while self.room <= self.win_level:

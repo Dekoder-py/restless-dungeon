@@ -68,16 +68,20 @@ class Game:
                 choice = input(">> ").lower()
                 continues = ["y", "ye", "ya", "yah", "yes", "yeah", "okay", "ok", "sure", "i guess", "yea",
                              "not really but okay"]
+                denies = ["n", "no", "nah", "nope","no thanks", "let me out", "no way"]
                 if choice in continues:
                     print("You continue onwards.")
                     print()
                     sleep(1.5)
                     break
-                else:
+                elif choice in denies:
                     print("[red]In the dungeon, there is no escape.[/red]")
                     self.player.take_damage(2)
                     print()
                     sleep(1.5)
+                else:
+                    print("I don't understand your answer.")
+                    sleep(1)
             self.room += 1
             clear_screen()
         print("[green]Congratulations! You reached the end of the dungeon and escaped.[/green]")

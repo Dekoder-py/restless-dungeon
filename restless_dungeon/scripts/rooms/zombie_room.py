@@ -21,10 +21,11 @@ def zombie_room(player):
         number = randint(0, 5)
         sleep(1)
         if player.inventory.get("sword"):
+            print("You killed all the zombies with ease thanks to your sword.")
             player.take_damage(2)
         else:
             player.take_damage(5)
-        print("You killed all the zombies.")
+            print("You killed all the zombies.")
         if number == 5:
             sleep(1)
             print("A zombie dropped a sword.")

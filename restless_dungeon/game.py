@@ -62,7 +62,7 @@ class Game:
         print("""
 [green]To make it out alive you must survive through 15 rooms.[/green]
 At the end of each room, you will be asked if you're ready to continue. Keep in mind you don't have a choice.
-Confirm you are ready by typing 'y', 'yes', 'yeah', or just press enter.
+Confirm you are ready by typing 'y', 'yes', 'yeah', or just press ENTER.
 [red]You will die if you run out of health or energy.[/red]
 [italic]The only ways to exit the game are:[/italic]
     - Escape the dungeon

@@ -71,10 +71,10 @@ class Game:
         while self.room <= self.win_level:
             self.enter_room()
             while True:
-                print("Are you ready to continue your journey?")
+                print("Are you ready to continue your journey? (y / yes / Enter to continue)")
                 choice = input(">> ").lower()
                 continues = ["y", "ye", "ya", "yah", "yes", "yeah", "okay", "ok", "sure", "i guess", "yea",
-                             "not really but okay"]
+                             "not really but okay", ""]
                 denies = ["n", "no", "nah", "nope", "no thanks", "let me out", "no way"]
                 if choice in continues:
                     print("You continue onwards.")

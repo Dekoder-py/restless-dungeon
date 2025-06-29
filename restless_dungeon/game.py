@@ -88,6 +88,7 @@ Confirm you are ready by typing 'y', 'yes', 'yeah', or just press enter.
                     self.player.take_damage(2)
                     print()
                     sleep(1.5)
+                    break
                 else:
                     print("I don't understand your answer.")
                     sleep(1)

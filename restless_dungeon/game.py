@@ -61,17 +61,19 @@ class Game:
         print("[yellow]You have entered the restless dungeon.[/yellow]")
         print("""
 [green]To make it out alive you must survive through 15 rooms.[/green]
+At the end of each room, you will be asked if you're ready to continue. Keep in mind you don't have a choice.
+Confirm you are ready by typing 'y', 'yes', 'yeah', or just press enter.
 [red]You will die if you run out of health or energy.[/red]
 [italic]The only ways to exit the game are:[/italic]
     - Escape the dungeon
     - Die
     - Press CTRL + C
         """)
-        sleep(2.4)
+        sleep(2.6)
         while self.room <= self.win_level:
             self.enter_room()
             while True:
-                print("Are you ready to continue your journey? (y / yes / Enter to continue)")
+                print("Are you ready to continue your journey?")
                 choice = input(">> ").lower()
                 continues = ["y", "ye", "ya", "yah", "yes", "yeah", "okay", "ok", "sure", "i guess", "yea",
                              "not really but okay", ""]

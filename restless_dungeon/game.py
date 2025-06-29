@@ -59,8 +59,15 @@ class Game:
     def run(self):
         clear_screen()
         print("[yellow]You have entered the restless dungeon.[/yellow]")
-        sleep(1)
-        print()
+        print("""
+[green]To make it out alive you must survive through 15 rooms.[/green]
+[red]You will die if you run out of health or energy.[/red]
+[italic]The only ways to exit the game are:[/italic]
+    - Escape the dungeon
+    - Die
+    - Press CTRL + C
+        """)
+        sleep(2.4)
         while self.room <= self.win_level:
             self.enter_room()
             while True:
@@ -68,7 +75,7 @@ class Game:
                 choice = input(">> ").lower()
                 continues = ["y", "ye", "ya", "yah", "yes", "yeah", "okay", "ok", "sure", "i guess", "yea",
                              "not really but okay"]
-                denies = ["n", "no", "nah", "nope","no thanks", "let me out", "no way"]
+                denies = ["n", "no", "nah", "nope", "no thanks", "let me out", "no way"]
                 if choice in continues:
                     print("You continue onwards.")
                     print()

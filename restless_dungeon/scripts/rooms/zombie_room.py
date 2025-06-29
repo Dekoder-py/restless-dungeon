@@ -18,7 +18,7 @@ def zombie_room(player):
         sleep(1)
         player.consume_energy(2)
     elif choice == "fight":
-        number = randint(0, 5)
+        number = randint(0, 3)
         sleep(1)
         if player.inventory.get("sword"):
             print("You killed all the zombies with ease thanks to your sword.")
